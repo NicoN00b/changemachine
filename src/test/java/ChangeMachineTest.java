@@ -1,3 +1,4 @@
+import Models.ChangeMachine;
 import org.junit.*;
 import static org.junit.Assert.*;
 
