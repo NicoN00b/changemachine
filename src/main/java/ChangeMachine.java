@@ -5,10 +5,10 @@ public class ChangeMachine {
     private int mPennies;
 
     public ChangeMachine() {
-        mQuarters = 20;
-        mDimes = 20;
-        mNickels = 20;
-        mPennies = 20;
+        mQuarters = 200;
+        mDimes = 200;
+        mNickels = 200;
+        mPennies = 200;
     }
 
     public int getQuarters(){

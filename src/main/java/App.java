@@ -30,7 +30,7 @@ public class App {
             model.put("name", name);
             model.put("amount", output);
             return new ModelAndView(model, "your_change.hbs");
-git
+
         }, new HandlebarsTemplateEngine());
 
     }
