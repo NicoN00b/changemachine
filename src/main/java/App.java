@@ -20,16 +20,17 @@ public class App {
         get("/your_change", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             String name = request.queryParams("name");
-            Float amount = Float.parseFloat(request.queryParams("amount"));
 
+            String input = request.queryParams("amount");
+            Float inputAsFloat = Float.parseFloat(input);
 
             ChangeMachine newChangeMachine = new ChangeMachine();
-            newChangeMachine.makeChange(amount);
+            String output = newChangeMachine.makeChange(inputAsFloat);
 
             model.put("name", name);
-            model.put("amount", amount);
-
+            model.put("amount", output);
             return new ModelAndView(model, "your_change.hbs");
+git
         }, new HandlebarsTemplateEngine());
 
     }
